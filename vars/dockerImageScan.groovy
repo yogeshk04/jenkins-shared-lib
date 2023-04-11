@@ -8,6 +8,6 @@
 def call(String aws_account_id, String region, String ecr_repo){
     
     sh """
-     sudo docker rmi ${ecr_repo}:latest ${aws_account_id}.dkr.ecr.${region}.amazonaws.com/${ecr_repo}:latest
+     docker rmi ${ecr_repo}:latest ${aws_account_id}.dkr.ecr.${region}.amazonaws.com/${ecr_repo}:latest
     """
 }
